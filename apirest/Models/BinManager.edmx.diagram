@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="116642e10be8487495fc6c92814b2d08" Name="Diagram1">
+        <EntityTypeShape EntityType="BinManagerModel.Assignment" Width="1.5" PointX="8.25" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.CartSession" Width="1.5" PointX="20.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.CartSessionItem" Width="1.5" PointX="23" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.Category" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.Classification" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.CompaniesAssigned" Width="1.5" PointX="3" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.Department" Width="1.5" PointX="8.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.LoginLog" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.Module" Width="1.5" PointX="6" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.OrdersDetail" Width="1.5" PointX="10.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.OrdersItem" Width="1.5" PointX="10.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.Permission" Width="1.5" PointX="3.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.Printer" Width="1.5" PointX="13.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.Role" Width="1.5" PointX="6" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.User" Width="1.5" PointX="0.75" PointY="24.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.AuditWarehouseLocation" Width="1.5" PointX="6" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.AuditWarehouseLocationsDetail" Width="1.5" PointX="11.25" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.BinContent" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.BinMovement" Width="1.5" PointX="3" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.BinMovementType" Width="1.5" PointX="8.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.Bin" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.BinType" Width="1.5" PointX="1.5" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.BulkMovement" Width="1.5" PointX="3" PointY="34.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.Company" Width="1.5" PointX="0.75" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.CompanyAssemblyDetail" Width="1.5" PointX="10.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.CompanyCategory" Width="1.5" PointX="15.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.CompanyProductSKU" Width="1.5" PointX="0.75" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.Filter_GlobalStock" Width="1.5" PointX="10.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.GlobalTransferDetail" Width="1.5" PointX="25.25" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.GlobalTransferHistory" Width="1.5" PointX="28.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.GlobalTransferMovement" Width="1.5" PointX="25.25" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.GlobalTransfer" Width="1.5" PointX="23" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.GlobalTransferStatu" Width="1.5" PointX="20.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.PrintingList" Width="1.5" PointX="3.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.ProductCondition" Width="1.5" PointX="3" PointY="27.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.SerialNumber" Width="1.5" PointX="5.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.Supplier" Width="1.5" PointX="7.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.SuppliersForProductSKU" Width="1.5" PointX="12.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.Warehouse" Width="1.5" PointX="1.5" PointY="30.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.WarehouseLocation" Width="1.5" PointX="1.5" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.WarehouseLocationsForCompany" Width="1.5" PointX="6" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.ConceptHistory" Width="1.5" PointX="18.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.Concept" Width="1.5" PointX="23" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.Country" Width="1.5" PointX="20.75" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.eCommMarketplaceFee" Width="1.5" PointX="20.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.eCommMarketplaceFeeHistory" Width="1.5" PointX="22.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.ExchageRateHistory" Width="1.5" PointX="23.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.ExchageRate" Width="1.5" PointX="24.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.IGI" Width="1.5" PointX="20.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.IGIHistory" Width="1.5" PointX="22.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.IVA" Width="1.5" PointX="24.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.IVAHistory" Width="1.5" PointX="25.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.ReportEmail" Width="1.5" PointX="5.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.ReportFilterEmail" Width="1.5" PointX="7.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.Report" Width="1.5" PointX="25.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.Tier" Width="1.5" PointX="12.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.sysdiagram" Width="1.5" PointX="14.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.GlobalSKUConditionHistory" Width="1.5" PointX="25.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.ProductCatalogImage" Width="1.5" PointX="16.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.MarketPlaceAttribute" Width="1.5" PointX="18.25" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.MarketplaceCompatibleSKU" Width="1.5" PointX="18.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.MarketplaceListingDetail" Width="1.5" PointX="18.25" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.MarketplaceManagement" Width="1.5" PointX="16" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.MarketplacePrice" Width="1.5" PointX="18.25" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.Marketplace" Width="1.5" PointX="13.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.MarketplaceSKUType" Width="1.5" PointX="13.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.Brand" Width="1.5" PointX="9.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.BrandAlia" Width="1.5" PointX="26.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.CategoryFeature" Width="1.5" PointX="26.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.CategoryTier" Width="1.5" PointX="24.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.CompanyCategoryBrandModel" Width="1.5" PointX="26.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.Model" Width="1.5" PointX="27.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.ModelAlia" Width="1.5" PointX="27.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.PriceCalculation" Width="1.5" PointX="27.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.Product" Width="1.5" PointX="27.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.ProductConditionCostRange" Width="1.5" PointX="14.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.ProductFeatureValue" Width="1.5" PointX="16.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.SKUData" Width="1.5" PointX="18.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.HistoryWorkOrder" Width="1.5" PointX="16" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.MovementDetail" Width="1.5" PointX="28.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.StatusWorkOrder" Width="1.5" PointX="13.75" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.TypeWorkOrder" Width="1.5" PointX="16.75" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.WorkOrderDetail" Width="1.5" PointX="21.25" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.WorkOrder" Width="1.5" PointX="19" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.RetailPrice" Width="1.5" PointX="20.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.CartOrder" Width="1.5" PointX="28.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.CartOrder_Details" Width="1.5" PointX="28.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.AssignedPermission" Width="1.5" PointX="6" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.BulkMatch" Width="1.5" PointX="29.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.BulkMovementsDetail" Width="1.5" PointX="5.25" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.Vw_BulkMovementsList" Width="1.5" PointX="5.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.vw_CompanyProductSKU" Width="1.5" PointX="7.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.vw_InventoryDamagedTV" Width="1.5" PointX="29.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BinManagerModel.vw_InventoryTV" Width="1.5" PointX="9.75" PointY="29.75" IsExpanded="true" />
+        <AssociationConnector Association="BinManagerModel.FK__Assignmen__Compa__29221CFB" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK__Assignmen__Modul__2739D489" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK__Assignmen__Roles__282DF8C2" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK__Assignmen__Users__2645B050" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK__CartSessi__Sessi__6265874F" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK__Companies__Compa__1DB06A4F" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK__Companies__Regis__1CBC4616" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK__Roles__Modules_I__236943A5" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK__AssignedP__Permi__2DE6D218" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK_AuditWarehouseLocations_Company" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK_AuditWarehouseLocations_WarehouseLocations" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK_AuditWarehouseLocationsDetail_AuditWarehouseLocations" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK_AuditWarehouseLocationsDetail_Bins" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK_AuditWarehouseLocationsDetail_Company" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK_BinContent_Bins" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK_BinContent_Company" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK_BinContent_CompanyProductSKU" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK__BulkMovem__BinMo__01F34141" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK_BinMovements_Company" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK_BinMovements_CompanyProductSKU" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK_Bins_BinTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK_Bins_Locations" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK__BulkMovem__BulkM__02E7657A" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK__ProductCo__Compa__511AFFBC" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK__Warehouse__Compa__3EDC53F0" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK_GlobalTransferDetail_GlobalTransfers" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK_GlobalTransferHistory_GlobalTransfers" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK_GlobalTransferHistory_GlobalTransferStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK_GlobalTransferMovements_GlobalTransfers" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK_GlobalTransfers_GlobalTransferStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK_Locations_Warehouse" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK__Warehouse__Locat__3FD07829" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK_Concepts_Countries" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK_MarketPlaceAttributes_MarketplaceManagement" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK_MarketplaceCompatibleSKUs_MarketplaceManagement" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK_MarketplaceListingDetails_MarketplaceManagement" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK_MarketplaceManagement_Marketplaces1" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK_MarketplaceManagement_MarketplaceSKUTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK_MarketplacePrices_MarketplaceManagement" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK_HistoryWorkOrder_StatusWorkOrder" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK_HistoryWorkOrder_WorkOrders" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK_WorkOrders_StatusWorkOrder" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK_WorkOrders_TypeWorkOrder" ManuallyRouted="false" />
+        <AssociationConnector Association="BinManagerModel.FK_WorkOrderDetail_WorkOrders" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

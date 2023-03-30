@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e58a7e7e356849648037058c4c36a93a" Name="Diagram1">
+        <EntityTypeShape EntityType="SmartControlModel.AssignmentPage" Width="1.5" PointX="5.25" PointY="55.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.Assignment" Width="1.5" PointX="3" PointY="46.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.CompaniesUserAssigned" Width="1.5" PointX="3" PointY="50.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.Department" Width="1.5" PointX="5.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.LogPageHit" Width="1.5" PointX="5.25" PointY="62" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.LogSession" Width="1.5" PointX="3" PointY="43.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.Menu" Width="1.5" PointX="3" PointY="57.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.Page" Width="1.5" PointX="3" PointY="62" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.UserArea" Width="1.5" PointX="5.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.UserAssignment" Width="1.5" PointX="8.25" PointY="54.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.UserConfiguration" Width="1.5" PointX="8.25" PointY="61.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.UserRol" Width="1.5" PointX="7.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.User" Width="1.5" PointX="8.75" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.UsersLogin" Width="1.5" PointX="0.75" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.UsersSupplier" Width="1.5" PointX="5.75" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.CategoryComment" Width="1.5" PointX="5.25" PointY="65.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.Customer_CategorybyModel" Width="1.5" PointX="18" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.Customer_Classification" Width="1.5" PointX="18" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.Customer_History" Width="1.5" PointX="13.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.CustomerMessage" Width="1.5" PointX="18" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.CustomerMessagesHit" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.CustomerMessagesInternalNote" Width="1.5" PointX="20.25" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.CustomerMessagesMovement" Width="1.5" PointX="20.25" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.Customer" Width="1.5" PointX="15.75" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.ItemType" Width="1.5" PointX="15.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.OpenCellPart" Width="1.5" PointX="8.75" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.PackagingType" Width="1.5" PointX="2.75" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.PrintingList" Width="1.5" PointX="23.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.PrintingListDetail" Width="1.5" PointX="26" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.PurchaseSite" Width="1.5" PointX="15.75" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.Category" Width="1.5" PointX="22.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.Purchase" Width="1.5" PointX="12.75" PointY="24.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.SKUData" Width="1.5" PointX="25" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.SKUModel" Width="1.5" PointX="10.75" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.sysdiagram" Width="1.5" PointX="13.75" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.CountryCode" Width="1.5" PointX="7.75" PointY="24.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.DescriptionData" Width="1.5" PointX="3" PointY="25.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.InventoryNumber" Width="1.5" PointX="14.75" PointY="24.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.LanguageCode" Width="1.5" PointX="0.75" PointY="26.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.MarketplaceAccount" Width="1.5" PointX="22.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.MarketplaceAttribute" Width="1.5" PointX="16.75" PointY="25.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.MarketplaceCountry" Width="1.5" PointX="10" PointY="24.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.MarketplaceMapping" Width="1.5" PointX="18.75" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.MarketplaceMerchantSKU" Width="1.5" PointX="25" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.SKUData1" Width="1.5" PointX="20.75" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.SKUImagesType" Width="1.5" PointX="18.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.Company" Width="1.5" PointX="0.75" PointY="59.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.CompanyCategory" Width="1.5" PointX="3" PointY="71.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.LicensePlateNumber" Width="1.5" PointX="18.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.OpenCellChange" Width="1.5" PointX="22.75" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.OpenCellData" Width="1.5" PointX="5.75" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.OpenCellDataImage" Width="1.5" PointX="8" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.OpencellDefect" Width="1.5" PointX="24.75" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.OpenCellDetail" Width="1.5" PointX="11" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.OpenCellDetailImage" Width="1.5" PointX="13.25" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.OpenCellPartsData" Width="1.5" PointX="25.75" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.OpenCellPartsDataDetail" Width="1.5" PointX="5.75" PointY="28.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.upcData" Width="1.5" PointX="7.75" PointY="28.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.ValidSerialnumber" Width="1.5" PointX="10.75" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.WorkCenterRouting" Width="1.5" PointX="8.25" PointY="82.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.WorkCenter" Width="1.5" PointX="3" PointY="80" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.WorkOrderDetail" Width="1.5" PointX="8.25" PointY="66.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.WorkOrderHistory" Width="1.5" PointX="5.25" PointY="77.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.WorkOrderInspection" Width="1.5" PointX="8.25" PointY="76.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.WorkOrderInspectionArea" Width="1.5" PointX="3" PointY="91.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.WorkOrder" Width="1.5" PointX="11.25" PointY="79" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.WorkOrderStatu" Width="1.5" PointX="3" PointY="99.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.WorkPlan" Width="1.5" PointX="13.5" PointY="77.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.WorkPlanAccessoriesClassification" Width="1.5" PointX="5.25" PointY="81.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.WorkPlanInspection" Width="1.5" PointX="15.75" PointY="70.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.WorkPlanItemAccessory" Width="1.5" PointX="5.25" PointY="70.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.WorkPlanItemAccessoriesCheckList" Width="1.5" PointX="18.75" PointY="69.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.WorkPlanItemClassification" Width="1.5" PointX="3" PointY="103.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.WorkPlanItemPackage" Width="1.5" PointX="20.75" PointY="22.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.WorkPlanItemPackageCondition" Width="1.5" PointX="23" PointY="22.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.WorkPlanItemPacking" Width="1.5" PointX="15.75" PointY="86.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.WorkPlanItemPhoto" Width="1.5" PointX="15.75" PointY="73.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.WorkPlanItemPhotoKey" Width="1.5" PointX="2.75" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.WorkPlanPackaging" Width="1.5" PointX="13.5" PointY="72.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.WorkPlanPackagingClassification" Width="1.5" PointX="9.75" PointY="28.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.WorkPlanPackagingDetail" Width="1.5" PointX="15.75" PointY="78.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.WorkPlanRepairApplied" Width="1.5" PointX="13.25" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.WorkPlanRepairAwaiting" Width="1.5" PointX="16.25" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.WorkPlanRepairFailure" Width="1.5" PointX="11" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.WorkPlanRepairHistory" Width="1.5" PointX="13.25" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.WorkPlanRepair" Width="1.5" PointX="11" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.WorkPlanRepairStatu" Width="1.5" PointX="8.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.WorkPlanRepairTechnician" Width="1.5" PointX="26.75" PointY="24.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.WorkPlanTRGID" Width="1.5" PointX="26.75" PointY="28.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.CostHistory" Width="1.5" PointX="3" PointY="68" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.PurchaseDetail" Width="1.5" PointX="11" PointY="60.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.PurchasePalletDetail" Width="1.5" PointX="27.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.PurchasePallet" Width="1.5" PointX="27.75" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.Purchases1" Width="1.5" PointX="8.25" PointY="91.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.SupplierCode" Width="1.5" PointX="5.25" PointY="90.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.Supplier" Width="1.5" PointX="3" PointY="122.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.SKURetailLink" Width="1.5" PointX="11.75" PointY="29.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.SKURetailLinksDetail" Width="1.5" PointX="13.75" PointY="29.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.SKURetailLinksDetailHistory" Width="1.5" PointX="27.75" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.MessageDetail" Width="1.5" PointX="23" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.Message" Width="1.5" PointX="20.75" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.MessagesDepartment" Width="1.5" PointX="15.75" PointY="29.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.MessagesEmail" Width="1.5" PointX="27.75" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.AssignedUser" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.Attachment" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.Comment" Width="1.5" PointX="3" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.Status" Width="1.5" PointX="28.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.StatusChanx" Width="1.5" PointX="3" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.Tag" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.TagByTicket" Width="1.5" PointX="6" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.Ticket" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.Exchange_rate" Width="1.5" PointX="17.75" PointY="30.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.Exchange_rate_history" Width="1.5" PointX="28.75" PointY="24.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.SKUImage" Width="1.5" PointX="21" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.History_TrgidByModel" Width="1.5" PointX="28.75" PointY="27.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.vw_ChannelAdvisor_Autobot_MX_CL_TV_NEW_GRB" Width="1.5" PointX="28.75" PointY="30.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.vw_OpenCellChangeIncompatible" Width="1.5" PointX="29.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.vw_WorkCenters" Width="1.5" PointX="12.75" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.vw_WorkCentersReport" Width="1.5" PointX="29.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.vw_WorkPlanItemClassifications" Width="1.5" PointX="29.75" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.POWorkOrder" Width="1.5" PointX="29.75" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.vw_Purchases" Width="1.5" PointX="29.75" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.vw_Suppliers" Width="1.5" PointX="29.75" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.vw_UrlByStores" Width="1.5" PointX="22.75" PointY="31.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SmartControlModel.vw_UrlByStores_v2" Width="1.5" PointX="0.75" PointY="32.25" IsExpanded="true" />
+        <AssociationConnector Association="SmartControlModel.FK_AssignmentPage_Assignments" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_AssignmentPage_Companies" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_AssignmentPage_Pages" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_Assignments_Companies" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_UserAssignment_Assignments" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_CompaniesUserAssigned_Companies" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_LogPageHits_Companies" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_LogPageHits_LogSessions" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_LogPageHits_Pages" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_Menus_Companies" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_Pages_Companies" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_UserConfiguration_Pages" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_UserAssignment_Companies" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_UserConfiguration_Companies" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_CategoryComments_Companies" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_CategoryComments_CompanyCategories" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_Customer_CategorybyModel_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_Customer_Classification_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK__CustomerM__Creat__19CACAD2" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK__CustomerM__Regis__15FA39EE" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK__CustomerM__Regis__758D6A5C" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_OpenCellDetail_OpenCellParts" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_PrintingListDetail_PrintingList" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_SKUData_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_MarketplaceCountries_CountryCodes" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_DescriptionData_LanguageCodes" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_MarketplaceMerchantSKU_MarketplaceAccounts" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_SKUImages_SKUImagesType" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_CompanyCategories_Companies" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_CostHistory_Companies" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_PurchaseDetails_Companies" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_Purchases_Companies" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_SupplierCodes_Companies" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_Suppliers_Companies" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkCenterRouting_Companies" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkCenters_Companies" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkOrderDetails_Companies" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkOrderHistory_Companies" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkOrderInspection_Companies" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkOrderInspectionAreas_Companies" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkOrders_Companies" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkOrderStatus_Companies" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkPlan_Companies" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkPlanAccessoriesClassifications_Companies" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkPlanInspection_Companies" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkPlanItemAccessories_Companies" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkPlanItemAccessoriesCheckList_Companies" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkPlanItemClassifications_Companies" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkPlanItemPhoto_Companies" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_SupplierCodes_CompanyCategories" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkOrderDetails_CompanyCategories" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkPlanAccessoriesClassifications_CompanyCategories" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkPlanItemAccessories_CompanyCategories" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_OpenCellDataImages_OpenCellData" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_OpenCellDetail_OpenCellData" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_OpenCellDetailImages_OpenCellDetail" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkCenterRouting_WorkPlanItemClassifications" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkOrderDetails_WorkOrders" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkPlan_WorkOrderDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkOrderHistory_WorkOrders" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkOrderHistory_WorkOrderStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkOrderInspection_WorkOrderInspectionAreas" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkOrders_WorkOrderStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkPlan_WorkPlanItemClassifications" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkPlanInspection_WorkPlan" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkPlanItemAccessoriesCheckList_WorkPlan" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkPlanItemPacking_WorkPlan" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkPlanItemPhoto_WorkPlan" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkPlanPackagingDetail_WorkPlan" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkPlanAccessoriesClassifications_WorkPlanItemAccessories" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkPlanAccessoriesClassifications_WorkPlanItemClassifications" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkPlanItemAccessoriesCheckList_WorkPlanItemAccessories" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkPlanItemPackageCondition_WorkPlanItemPackage" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkPlanPackagingDetail_WorkPlanPackaging" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkPlanRepairApplied_WorkPlanRepairFailures" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkPlanRepairApplied_WorkPlanRepairs" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkPlanRepairAwaiting_WorkPlanRepairFailures" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkPlanRepairAwaiting_WorkPlanRepairs" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkPlanRepairHistories_WorkPlanRepairs" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_WorkPlanRepairs_WorkPlanRepairStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_CostHistory_PurchaseDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_PurchaseDetails_Purchases" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_Purchases_Suppliers" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_SupplierCodes_Suppliers" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_MessageDetails_Messages" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_AssignedUsers_Ticket" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_Attachments_Ticket" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_Comments_Ticket" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_StatusChanges_Ticket" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_TagByTicket_Tag" ManuallyRouted="false" />
+        <AssociationConnector Association="SmartControlModel.FK_TagByTicket_Ticket" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

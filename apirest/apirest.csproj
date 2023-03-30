@@ -1,0 +1,1884 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F83F4271-DD39-4726-9EBE-18D249DA5F1D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>apirest</RootNamespace>
+    <AssemblyName>apirest</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.11.46.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.11.46\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\netstandard2.0\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=3.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=109.0.1.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.109.0.1\lib\netstandard2.0\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.9\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Text.Encodings.Web, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.7.0.0\lib\netstandard2.0\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.7.0.2\lib\netstandard2.0\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.9\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.9\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.4.8.2\lib\net46\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\HelpPage\ApiDescriptionExtensions.cs" />
+    <Compile Include="Areas\HelpPage\App_Start\HelpPageConfig.cs" />
+    <Compile Include="Areas\HelpPage\Controllers\HelpController.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageAreaRegistration.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageConfigurationExtensions.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\CollectionModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ComplexTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\DictionaryModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\EnumTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\EnumValueDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\IModelDocumentationProvider.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\KeyValuePairModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelDescriptionGenerator.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelNameAttribute.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelNameHelper.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ParameterAnnotation.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ParameterDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\SimpleTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\Models\HelpPageApiModel.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleKey.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ImageSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\InvalidSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ObjectGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
+    <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="functions\B_Api.cs" />
+    <Compile Include="functions\B_Functions.cs" />
+    <Compile Include="functions\B_GetUrl.cs" />
+    <Compile Include="functions\B_Operations.cs" />
+    <Compile Include="functions\B_Tools.cs" />
+    <Compile Include="functions\B_Urls.cs" />
+    <Compile Include="functions\N_P_SendEmail.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AssignedPermission.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AssignedUser.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Assignment.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AssignmentPage.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Attachment.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AuditWarehouseLocation.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AuditWarehouseLocationsDetail.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Bin.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BinContent.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BinManager.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BinManager.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BinManager.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BinManager.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BinManager.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BinMovement.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BinMovementType.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BinType.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Brand.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BrandAlia.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BulkMatch.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BulkMovement.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BulkMovementsDetail.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CartOrder.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CartOrder_Details.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CartSession.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CartSessionItem.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Category.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CategoryComment.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CategoryFeature.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CategoryTier.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Classification.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Comment.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CompaniesAssigned.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CompaniesUserAssigned.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Company.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CompanyAssemblyDetail.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CompanyCategory.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CompanyCategoryBrandModel.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CompanyProductSKU.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Concept.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ConceptHistory.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CostHistory.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Country.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CountryCode.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Customer.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CustomerMessage.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CustomerMessagesHit.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CustomerMessagesInternalNote.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CustomerMessagesMovement.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Customer_CategorybyModel.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Customer_Classification.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Customer_History.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\dailyPurchaseOrdersCreate_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Department.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DescriptionData.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\eCommMarketplaceFee.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\eCommMarketplaceFeeHistory.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ExchageRate.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ExchageRateHistory.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Exchange_rate.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Exchange_rate_history.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Filter_GlobalStock.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fnSplit_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fn_GetClassificationsSteps_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fn_GetOpenCellDefectiveCodes_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fn_GetOpenCellOriginCountry_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fn_GetPriorityName_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fn_GetStatusName_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fn_GetStatusTicketName_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fn_GetValidSerialNumberOrModelbyPO_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fn_RetailBalanceBin_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fn_TGetPriceCalculationsByCategorySKU_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fn_TGetTvCountryNameOrigin_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fn_ValidateSerialNumberOrSKUbyBinIDandSKU_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fn_ValidateSerialNumberOrSKUbyBinID_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\fn_ValidateSerialNumberOrSKU_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GlobalSKUConditionHistory.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GlobalTransfer.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GlobalTransferDetail.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GlobalTransferHistory.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GlobalTransferMovement.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GlobalTransferStatu.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HistoryWorkOrder.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\History_TrgidByModel.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IGI.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IGIHistory.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InsertAndUpdate_LinkBySKU_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InventoryNumber.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ItemType.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IVA.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IVAHistory.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LanguageCode.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LicensePlateNumber.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoginLog.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LogPageHit.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LogSession.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Marketplace.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MarketplaceAccount.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MarketPlaceAttribute.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MarketplaceCompatibleSKU.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MarketplaceCountry.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MarketplaceListingDetail.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MarketplaceManagement.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MarketplaceMapping.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MarketplaceMerchantSKU.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MarketplacePrice.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MarketplaceSKUType.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Menu.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Message.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MessageDetail.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MessagesDepartment.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MessagesEmail.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelAlia.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Module.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MovementDetail.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OpenCellChange.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OpenCellData.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OpenCellDataImage.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OpencellDefect.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OpenCellDetail.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OpenCellDetailImage.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OpenCellPart.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OpenCellPartsData.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OpenCellPartsDataDetail.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrdersDetail.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrdersItem.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PackagingType.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Page.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Permission.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\POWorkOrder.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PriceCalculation.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Printer.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PrintingList.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PrintingListDetail.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Product.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductCatalogImage.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductCondition.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductConditionCostRange.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductFeatureValue.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Purchase.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PurchaseDetail.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PurchasePallet.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PurchasePalletDetail.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Purchases1.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PurchaseSite.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Report.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ReportEmail.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ReportFilterEmail.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RetailPrice.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Role.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SerialNumber.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SKUData.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SKUData1.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SKUImage.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SKUImagesType.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SKUModel.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SKURetailLink.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SKURetailLinksDetail.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SKURetailLinksDetailHistory.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SmartControlModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmartControlModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SmartControlModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SmartControlModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmartControlModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\split_string_XML_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\spr_CartOrder_Confirm_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\spr_CartOrder_Delete_BinOrPallet_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\spr_GetLicensePlateNumberData_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\spr_GetPurchasesPalletDetailD_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\spr_InsertWorkOrderDetailsNewModelandSku_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\spr_Insert_OpenCellPartsData_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\spr_Insert_PartsdataDetailID_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\spr_ReportClassificationByRangeDateAndWorkCenter2_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\spr_ReportClassificationByRangeDateAndWorkCenter_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\spr_ReportPOProcessClassificationDetailProduct_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\spr_TVRequiredVersionByBrandAndModel_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\spr_Update_LicensePlateNumber_ChangeBrandAndModel_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\spr_ValidIsInsertedTRGID_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_ActiveDeleteMerchantSKU_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_ActiveDeleteSKUImages_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_AddBulkPurchaseDetails_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_AddPurchaseDetails_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_AddPurchasePallet_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_AddSerialNumberWorkOrderDetail_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_AddWorkOrderDetail_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_AD_GetAuditProgressAndLatestInformation_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_AD_GetAuditWarehouseLocationsDetail_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_AD_InsertAuditDetail_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_BulkMovementsTrasnsferByCompanyBulkId_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_ChangeStatusWorkPlanRepairs_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_ChannelAdvisor_CL_Autobot_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_ConceptsSelectAddUpdateDelete_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_CountriesSelectAddUpdateDelete_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_CreateGlobalTransferPO_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_CreatePalletOneStep_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_CreateWorkOrderPlan_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_CreateWorkPlanRepairFailure_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_DeleteLicensePlateNumberPackedlist_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_DeleteMarketplaceASIN_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_DeleteOpenCellChange_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_DeleteOpenCellData_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_DeleteOpenChangeReport_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_DeletePalletNumberByPO_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_DeleteSupplierCode_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_deleteUserLogin_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_DeleteWorkPlanPackagingDetail_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_Delete_BulkMatchByID_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_Delete_Customer_CategorybyModel_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_Delete_Customer_Classification_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_Delete_Filter_Globalstock_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_eCommMarketplaceFeeSelectAddUpdateDelete_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_EnablesOrDisabledPackageById_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_ExchageRatesSelectAddUpdateDelete_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_FilterBinList_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_FilterSupplierByCompanyOrAvailability_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetAccessoriesAndComments_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetAccessoriesListClassifications_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetActiveWorkOrders1_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetActiveWorkOrders_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetAllAccounts_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetAllActiveLocationsByWarehose_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetAllActiveLocations_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetAllBinMovementType_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetAllBinsRegistered_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetAllCategoriesByCompany_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetAllCategories_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetAllCompanies_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetAllLocationsByCompanyIdOrdWarehouseId_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetAllSKUAllBINBySKU_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetAllSKUGlobalStockByCompany_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetAvailableCategoriesOrders_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetBinInventoryReportBySearch_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetBinInventoryReport_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetBinMovementTypesByAction_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetBulkMovementsDetailsByBulkMovementsID_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetBulkMovementsHeader_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetCategoriesComments_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetCategoryComments_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetClosedCustomerMessagedByDateRanges_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetCompanyCategories_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetCompanyMenuStructure_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetCompatibilityOC_ByModel_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetCompatibility_OpencellByModel_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetCountryCodes_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetCustomers__Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetDataInfo_PurchaseReceived_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetDataLicensePlateNumber_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetDisplayInformationBySerialNumber_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetDisplayInformationBySKU_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetGlobalSKUConditionHistoryID_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetInformationTotalBySKU_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetInfoSKUs_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetInventoryReportBySearchBin_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetItemClassifications_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetItemPackageConditions_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetItemPackage_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetItemTypes_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetLanguageCodes_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetLicensePlateHistory_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetLicensePlateNumberDataForClient_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetLicensePlateNumberDataOpenCell_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetLicenseplate_ByBinContent_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetLicenseplate_ByBulkMovement_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SP_GetLocationsByCompanyAndUser_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetLoginUserValidation_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetMarketplaceAccounts_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetMarketplaceMapping_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetMessagesByFilter_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetModel_BySearch_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetMovementHistoryBySku_Condition_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetOpenCellImportData_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetOpenCellPartsDataDetails_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetOpenCellPartsData_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetOpenCellPartsList_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetOpenCellSupportInfo_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetPackageCondition_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetPackagingTypes_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetPalletForInspection_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetPhotoKeyNumber_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetPlanningProductSKUbyCompany_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetPOSerialNumber_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetPrintLicensePlateNumber_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetProductConditions_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetProductSKUListbyBinID_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetPurchaseDetailsReport_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetPurchaseHistory_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetPurchasePalletQtyReceived_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetPurchasePallets_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetPurchases_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetRepairLicensePlateNumber_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetReport_Email_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetReprintKitLabel_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetReprintQRBoxLabel_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetReprintQRLabel_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetReviewLicensePlateNumber_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetsDetailInformationByBulkMovementId_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetSkuDetails_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetSKUsCostsReport_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetSuggestedWarehouseLocation_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetSupplierCodes_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetSupplierReport_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetSuppliers_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetTicketByCompanyAndUser_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetTypeImages_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetTypeOfMovementDetailsBySearch_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetUPCGeneral_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetUserLogin_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetUserSupervisorValidation_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetValidLicensePlateNumberPalletInfo_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetValidLicensePlateNumber_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetValidModelBySearch_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetValidPalletInfo_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetValidTRGIDUPCinfo_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetWarehouseLocationByCompany_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetWorkCenters_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetWorkOrdersReport_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetWorkOrderStatusReport_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetWorkPlanByPO_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetWorkPlanDetailByPO_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetWorkPlanLicensePlateNumber_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetWorkPlanPackagingReport_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetWorkPlanRepairFailures_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetWorkPlanRepairStatus_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetWorkPlanRepairTechnicians_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_GetWorkPlanTRGIDsByWorkOrderID_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_Get_BulkMatch_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_Get_GlobalstocBySelect2_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_Get_GlobalstockByFilters_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_Get_GlobalStock_InventoryBySKUAndCondicion_Quantity_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_Get_GlobalStock_InventoryBySKU_Condition_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_Get_GlobalStock_InventoryBySKU_PriceStores1_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_Get_GlobalStock_InventoryBySKU_PriceStores_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_Get_GlobalStock_InventoryBySKU_PriceStores_v2_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_Get_GlobalStock_InventoryBySKU_PriceStores_v3_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_Get_GlobalStock_InventoryBySKU_v2_FPT_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_Get_VirtualQty_BySKUCondition_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SP_GT_GetInformationByPOIDForReports_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SP_GT_GetMovementsByPOAndActionForReports_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_helpdiagrams_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_IGISelectAddUpdateDelete_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_InsertBinInputOutputStock_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_InsertCustomers_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_InsertLicensePlateNumbersPlanPackagingByWorkCenter_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_InsertMessage_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_InsertOpenCellChange_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_InsertOpenCellDefects_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_InsertPackagingBinInputStock2_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_InsertTicket_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_InsertUpdateBIN_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_InsertUpdateCategory_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_InsertUpdateLocation_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_InsertUpdateSKU_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_InsertUpdateWarehouse_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_InsertUsers_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_Insert_BulkMatch_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_Insert_Customer_CategorybyModel_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_Insert_Customer_Classification_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_IVASelectAddUpdateDelete_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_MarketplaceManagement_InsertUpdate_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_ModulesAssignedbyUserAndCompany_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SP_MR_GetAllActionTypes_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SP_MR_GetLast1000MovementsHistoryBySkuOrBinCodeAndCompanyId_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SP_MR_GetLast500MovementsByCompanyId_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SP_MR_GetLocationsByCompanyID_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SP_MR_GetMovementsHistoryByCompanyIdAndDateRanges_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SP_MR_GetMovementsHIstoryBySkuOrBinByDateRanges_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_PA_GetCompanyListByUser_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_PA_GetCompanyProductSKUList_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_PA_GetLogin_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_PA_GetPrinterInfoByCompanyWarehousePrinter_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_PA_GetPrinterListByCompanyWarehouse_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_PA_GetPrintingListByPrinterID_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_PA_GetRegisteredMac_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_PA_GetWarehouseListByCompany_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_PinWorkPlanRepairs_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_PriceCalculationSelectAddUpdateDelete_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_PrintWorkPlanLicensePlateNumber_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_ProcessingLicensePlateNumber_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_ProcessingLicensePlateNumber_V2_PT_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_ProcessingLicensePlateNumber_V2_TEST_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_SaveCategoryComments_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_SaveItemTypes_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_SaveMarketplaceASIN_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_SaveMarketplaceMerchantSKU_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_SavePackagingTypes_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_SavePalletDetailbyLicensePlateNumber_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_SavePlanPackagingByWorkCenter_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_SaveReviewLicensePlateData_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_SaveSKUData_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_SaveSKUDescriptionData_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_SaveSupplierCodes_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_SaveWorkPlanPackagingDetail_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_SendEmailNewModelRequest2_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_SendEmailNewModelRequest_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_TierSelectAddUpdateDelete_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_UpdateActiveItemType_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_UpdateActivePackagingType_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_UpdateActiveSupplier_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_UpdateASINCountries_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_UpdateASINIsRenewed_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_UpdateClassificationLicensePlate_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_UpdateCustomer_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_UpdateIsNotReceived_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_UpdateLicensePlateNumber_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_UpdateLicensePlateNumber_V2_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_UpdateMessage_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_UpdateOpenCellData_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_UpdateOpenCellDetail_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_UpdateOpenChangeReport_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_UpdatePasswordByUser_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_UpdatePassWordGeneralUser_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_UpdatePurchaseDetails_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_UpdatePurchasePallets_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_UpdateTRGIDPurchases_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_UpdateUser_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_UpdateWorkOrder_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_UpdateWorkPlanNotReceived_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_UpdateWorkPlanTRGID_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_Update_BulkMatchByID_Result.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_Update_WorkPlanPackaging_Status_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_UploadImages_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_UploadLinksV_2_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_UploadLinks_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_UploadPurchaseFile_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_UploadTemplateTRGIDFile_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_UploadTRGIDFile_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_UploadUserByExcel_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_ValidarLisencePlateTimeByPO_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_ValidateLicensePlateNumberForPallet_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_ValidationUserLogin_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sp_ValidSerialNumber_Result.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Status.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\StatusChanx.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\StatusWorkOrder.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Supplier.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SupplierCode.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SuppliersForProductSKU.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tag.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TagByTicket.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Ticket.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Tier.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TypeWorkOrder.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\upcData.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserArea.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserAssignment.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserConfiguration.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserRol.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UsersLogin.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UsersSupplier.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ValidSerialnumber.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Vw_BulkMovementsList.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_ChannelAdvisor_Autobot_MX_CL_TV_NEW_GRB.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_CompanyProductSKU.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_InventoryDamagedTV.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_InventoryTV.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_OpenCellChangeIncompatible.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Purchases.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_Suppliers.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_UrlByStores.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_UrlByStores_v2.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_WorkCenters.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_WorkCentersReport.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vw_WorkPlanItemClassifications.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Warehouse.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WarehouseLocation.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WarehouseLocationsForCompany.cs">
+      <DependentUpon>BinManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WorkCenter.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WorkCenterRouting.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WorkOrder.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WorkOrderDetail.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WorkOrderHistory.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WorkOrderInspection.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WorkOrderInspectionArea.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WorkOrderStatu.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WorkPlan.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WorkPlanAccessoriesClassification.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WorkPlanInspection.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WorkPlanItemAccessoriesCheckList.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WorkPlanItemAccessory.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WorkPlanItemClassification.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WorkPlanItemPackage.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WorkPlanItemPackageCondition.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WorkPlanItemPacking.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WorkPlanItemPhoto.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WorkPlanItemPhotoKey.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WorkPlanPackaging.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WorkPlanPackagingClassification.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WorkPlanPackagingDetail.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WorkPlanRepair.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WorkPlanRepairApplied.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WorkPlanRepairAwaiting.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WorkPlanRepairFailure.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WorkPlanRepairHistory.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WorkPlanRepairStatu.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WorkPlanRepairTechnician.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WorkPlanTRGID.cs">
+      <DependentUpon>SmartControlModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Models\BinManager.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BinManager.edmx</DependentUpon>
+      <LastGenOutput>BinManager.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\BinManager.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BinManager.edmx</DependentUpon>
+      <LastGenOutput>BinManager.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\SmartControlModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SmartControlModel.edmx</DependentUpon>
+      <LastGenOutput>SmartControlModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\SmartControlModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SmartControlModel.edmx</DependentUpon>
+      <LastGenOutput>SmartControlModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\HelpPage\Views\Web.config" />
+    <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\ResourceModel.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Index.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\TextSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\SimpleTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Samples.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Parameters.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ModelDescriptionLink.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\KeyValuePairModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\InvalidSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ImageSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\HelpPageApiModel.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\EnumTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\DictionaryModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ComplexTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <EntityDeploy Include="Models\BinManager.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BinManager.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\BinManager.edmx.diagram">
+      <DependentUpon>BinManager.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\SmartControlModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SmartControlModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\SmartControlModel.edmx.diagram">
+      <DependentUpon>SmartControlModel.edmx</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\apiscrapmitech - Web Deploy.pubxml" />
+    <None Include="Scripts\jquery-3.6.4.intellisense.js" />
+    <Content Include="Scripts\jquery-3.6.4.js" />
+    <Content Include="Scripts\jquery-3.6.4.min.js" />
+    <Content Include="Scripts\jquery-3.6.4.slim.js" />
+    <Content Include="Scripts\jquery-3.6.4.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\jquery-3.6.4.slim.min.map" />
+    <Content Include="Scripts\jquery-3.6.4.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62331</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:62331/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.4.8.2\build\Selenium.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.4.8.2\build\Selenium.WebDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\Selenium.Chrome.WebDriver.85.0.0\build\Selenium.Chrome.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.Chrome.WebDriver.85.0.0\build\Selenium.Chrome.WebDriver.targets'))" />
+  </Target>
+  <Import Project="..\packages\Selenium.WebDriver.4.8.2\build\Selenium.WebDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.4.8.2\build\Selenium.WebDriver.targets')" />
+  <Import Project="..\packages\Selenium.Chrome.WebDriver.85.0.0\build\Selenium.Chrome.WebDriver.targets" Condition="Exists('..\packages\Selenium.Chrome.WebDriver.85.0.0\build\Selenium.Chrome.WebDriver.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
