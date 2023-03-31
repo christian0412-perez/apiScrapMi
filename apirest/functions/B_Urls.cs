@@ -26,9 +26,9 @@ namespace restapi.functions
             B_GetUrl b_GetUrl = new B_GetUrl();
 
             B_Functions b_Functions = new B_Functions();
-            List<vw_UrlByStores> listUrl = b_GetUrl.listUr();
+            //List<vw_UrlByStores> listUrl = b_GetUrl.listUr();
             B_Tools b_Tools = new B_Tools();
-            Console.WriteLine(listUrl);
+            //Console.WriteLine(listUrl);
 
             var domain = b_Tools.GetDomainName(url);
 
@@ -58,41 +58,7 @@ namespace restapi.functions
                 response = ScrapML(url, b_Functions);
 
             }
-            //if (domain == "bestbuy.com")
-            //{
-            //    strHtmlBestbuy = b_Functions.GetRequest2(url);
-            //    try
-            //    {
-
-            //        using (SmartControlEntities1 db = new SmartControlEntities1())
-            //        {
-            //            var search = (from n in db.vw_UrlByStores
-            //                          where n.Bestbuy == url
-            //                          select n.SKU).First();
-            //            var searchskuid = (from n in db.vw_UrlByStores
-            //                               where n.Bestbuy == url
-            //                               select n.SKURetailLinkID).First();
-            //            sku = search;
-            //            skuid = searchskuid;
-            //        }
-            //        //Scraper values in html and save values
-            //        Console.WriteLine("Scraper Walmart");
-            //        object result = b_Functions.DataParse_Bestbuy(skuid, "Bestbuy", url, sku.ToString());
-            //        Console.WriteLine("Result:");
-            //        Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
-            //        response = JsonConvert.SerializeObject(result, Formatting.Indented);
-
-            //    }
-            //    catch
-            //    {
-            //        response = "Error url invalida: " + url;
-
-            //    }
-            //}
-
-            //if (needAwait)
-            //    Thread.Sleep(8000);
-
+           
             return response;
         }
 
@@ -532,6 +498,26 @@ namespace restapi.functions
 
             return strHtmlWalmart;
 
+        }
+
+        public static string BySku(string sku)
+        {
+            B_Functions b_Functions = new B_Functions();
+            //List<vw_UrlByStores> listUrl = b_GetUrl.listUr();
+            B_Tools b_Tools = new B_Tools();
+            string urltemp = string.Empty;
+            string response = "";
+            using (SmartControlEntities1 db = new SmartControlEntities1())
+            {
+                var search = (from n in db.vw_UrlByStores
+                              where n.SKU == sku
+                              select n).First();
+                var domain = b_Tools.GetDomainName(search.Amazon);
+                 response = DoAll(search.Amazon);
+                
+            }
+
+            return response;
         }
     }
    

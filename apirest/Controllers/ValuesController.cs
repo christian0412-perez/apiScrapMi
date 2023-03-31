@@ -13,31 +13,44 @@ namespace apirest.Controllers
     public class ValuesController : ApiController
     {
         // GET api/values
-        public dynamic Get([FromBody]string value)
-        {
-            string Response = restapi.functions.B_Urls.DoAll(value);
-            if (Response.Substring(0, 5) == "Error")
-            {
-                return Response;
-            }
-            else
-            {
-                var json = JsonConvert.DeserializeObject(Response);
-                return json;
-            }
-        }
-
-        // POST api/values
         public dynamic Post([FromBody]string value)
         {
-            using (SmartControlEntities1 db = new SmartControlEntities1())
-            {
-                var sku = (from n in db.vw_UrlByStores
-                           where n.Amazon==value  select n.SKU).ToList();
-                return sku;
-            }
+                string Response = restapi.functions.B_Urls.DoAll(value);
+                if (Response.Substring(0, 5) == "Error")
+                {
+                    return Response;
+                }
+                else
+                {
+                    var json = JsonConvert.DeserializeObject(Response);
+                    return json;
+                }
 
+            
         }
+        public string Get()
+        {
+            return "error";
+        }
+
+
+
+
+        //// POST api/values
+        //public dynamic Post([FromBody]string value)
+        //{
+        //    try
+        //    {
+        //        string response = B_Urls.BySku(value);
+        //        var json = JsonConvert.DeserializeObject(response);
+        //        return json;
+        //    }
+        //    catch
+        //    {
+        //        return "error";
+        //    }
+
+        //}
 
         // PUT api/values/5
         public void Get(int id)
